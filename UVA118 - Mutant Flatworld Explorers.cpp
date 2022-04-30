@@ -105,11 +105,16 @@ void turn(char d)
 int main()
 {
 
+    int last_position[2];
+    
+
     for (int &i : upper_right)
         cin >> i;
 
     while (cin >> X >> Y >> dir)
     {
+
+        bool fall = false;
 
         switch (dir)
         {
@@ -133,18 +138,17 @@ int main()
         for (char d : instruction)
         {
             {
-                int last_position[2];
                 last_position[0] = X;
                 last_position[1] = Y;
 
                 turn(d);
-
-                if (isDown())
-                {
-                    cout << last_position[0] << " " << last_position[1] << " LOST" << endl;
-                }
+                fall = isDown();
+                    
             }
         }
-        cout << X << " " << Y << " " << dir << endl;
+        if (fall)
+            cout << last_position[0] << " " << last_position[1] << " " << dir << " LOST" << endl;
+        else
+            cout << X << " " << Y << " " << dir << endl;
     }
 }
