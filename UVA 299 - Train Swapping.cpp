@@ -40,11 +40,11 @@ For each test case output the sentence: ‘Optimal train swapping takes S swaps.
 Sample Input
 3
 3
-132
+1 3 2
 4
-4321
+4 3 2 1
 2
-21
+2 1
 
 Sample Output
 Optimal train swapping takes 1 swaps.
@@ -57,7 +57,7 @@ https://zerojudge.tw
 */
 
 #include "/Users/doeshing/development/stdc++.h"
-
+// #include "bits/stdc++.h"
 #define AND &&
 #define OR ||
 
@@ -65,7 +65,7 @@ using namespace std;
 // public variables
 int counter;
 
-vector<int> bubbleSort(vector<int> a)
+vector<int> selectionSort(vector<int> a)
 {
     for (int i = 1; i < a.size(); i++)
     {
@@ -79,6 +79,8 @@ vector<int> bubbleSort(vector<int> a)
                 counter++;
             }
         }
+        // for (int i : a)
+        //     cout << " " << i << endl;   
     }
 
     return a;
@@ -93,14 +95,13 @@ int main()
         counter = 0;
         int number;
         cin >> number;
-        vector<int> test;
-        string sentence;
-        cin >> sentence;
-        for (int i : sentence)
-            test.push_back(i - '0');
-        test = bubbleSort(test);
-        // for (int i : test)
-        //     cout << i << " ";
+        vector<int> test(number);
+        for(int &i : test)
+            cin >> i;
+            
+
+        test = selectionSort(test);
+
         cout << endl;
         cout << "Optimal train swapping takes " << counter << " swaps." << endl;
     }
