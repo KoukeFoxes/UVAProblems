@@ -53,8 +53,9 @@ All instruction strings will be less than 100 characters in length.
 Output
 For each robot position/instruction in the input, the output should indicate the final grid position and orientation of the robot.
 If a robot falls off the edge of the grid the word ‘LOST’ should be printed after the position and orientation.
+
 相關參考：
-https://zerojudge.tw
+https://zerojudge.tw/ShowProblem?problemid=c082
 */
 
 #include "/Users/doeshing/development/stdc++.h"
