@@ -28,7 +28,7 @@ Sample Output
 5
 
 相關參考：
-https://zerojudge.tw/
+https://zerojudge.tw/ShowProblem?problemid=f444
 */
 
 #include "/Users/doeshing/development/stdc++.h"
