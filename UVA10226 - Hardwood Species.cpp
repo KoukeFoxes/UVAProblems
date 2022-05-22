@@ -43,13 +43,11 @@ int main() {
 		map<string, double>::iterator iter;
 
 		int total = 0;
-		int empty_times = 0;
 		while(getline(cin, str) && str != ""){
 				
 			m[str]++;
 			total++;
 		}
-
 		
 		for(iter = m.begin(); iter != m.end(); iter++)
 			cout << fixed << setprecision(4) << iter->first << " " << ((iter->second)/total) * 100 << endl;
