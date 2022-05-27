@@ -1,0 +1,26 @@
+#include "bits/stdc++.h"
+using namespace std;
+
+int main(){
+	int N;
+	while(cin >> N && N >=0){
+		
+		long male = 0;
+		long female = 1;
+		long last_male = 0;
+		long last_female = 0;
+
+		for(int i = 0 ; i <= N; i++){
+
+			female = last_male + 1;
+			male = last_male + last_female;
+			last_male = male;
+			last_female = female;
+		}
+		
+		cout << last_male << " " << last_female + last_male << endl;
+		
+	}
+	
+	
+}
