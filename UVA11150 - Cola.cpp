@@ -28,6 +28,6 @@ int main_()
 {
     int n;
     while( cin >> n )
-        std::cout << n * 1.5  << endl;
+        std::cout << n * 1.5  << std::endl;
     return 0;
 }
